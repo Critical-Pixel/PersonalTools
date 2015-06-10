@@ -59,6 +59,7 @@
     <Compile Include="TESTBOX.Designer.cs">
       <DependentUpon>TESTBOX.cs</DependentUpon>
     </Compile>
+    <Compile Include="TotalObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />

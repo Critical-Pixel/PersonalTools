@@ -74,6 +74,12 @@ namespace PersonalTools
             }
            
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            TotalObject TO = new TotalObject();
+            TO.Email.SendNotificationEmail();
+        }
  
     }
 }
