@@ -31,7 +31,7 @@ namespace PersonalTools
                 {
                     if (string.IsNullOrEmpty(this.displayName))
                     {
-                        return new MailAddress("support@isisbroker.co.uk");
+                        return new MailAddress("support@isisbroker.co.uk!");
                     }
                     return new MailAddress("support@isisbroker.co.uk", this.displayName);
                 }
