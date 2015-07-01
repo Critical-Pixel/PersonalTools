@@ -10,7 +10,8 @@ using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Reflection;
 using PersonalTools.Models;
-
+using PersonalTools;
+using PersonalTools.ClassTester;
 namespace PersonalTools
 {
 
@@ -21,6 +22,7 @@ namespace PersonalTools
         public TESTBOX()
         {
             InitializeComponent();
+        
         }
         public IEnumerable<Control> GetAll(Control control, Type type)
         {
@@ -77,8 +79,20 @@ namespace PersonalTools
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            TotalObject TO = new TotalObject();
-            TO.Email.SendNotificationEmail();
+            Child.Maingo();
+           // TotalObject TO = new TotalObject();
+           // TO.Email.SendNotificationEmail();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DateTime now = DateTime.Now;
+            DateTime Sept = new DateTime(now.Year, 09, 01);
+            DateTime Check = dateTimePicker1.Value;
+            if (Check > Sept)
+            { DateCheckOutput.Text = "We're after this date"; }
+            else if (Check < Sept)
+            { DateCheckOutput.Text = "We're before this date"; }
         }
  
     }
