@@ -33,7 +33,13 @@ namespace PersonalTools.GStuff
         {
            if (Win ==0) {
                 PictureBox USED = (PictureBox)sender;
-                if (USED.Image == null)
+                string[] UsedArray = ((PictureBox)sender).Name.Replace("X", "").Split('Y');
+                int x;
+                int y;
+                int.TryParse(UsedArray[0], out x);
+                int.TryParse(UsedArray[1], out y);
+   
+               if  (GameArea[x - 1, y - 1] == 0)
                 {
                     USED.Image = LoadImg();
                     if (!CheckWin(USED))
@@ -61,6 +67,31 @@ namespace PersonalTools.GStuff
                     }
 
                 }
+            }
+        }
+
+        private void Hover(object sender, System.EventArgs e)
+        {
+            string[] UsedArray = ((PictureBox)sender).Name.Replace("X", "").Split('Y');
+            int x;
+            int y;
+            int.TryParse(UsedArray[0], out x);
+            int.TryParse(UsedArray[1], out y);
+            if( GameArea[x-1, y-1] == 0 && Win == 0)
+            {
+                ((PictureBox)sender).Image = LoadImg();
+            }
+        }
+        private void HoverLeave(object sender, System.EventArgs e)
+        {
+            string[] UsedArray = ((PictureBox)sender).Name.Replace("X", "").Split('Y');
+            int x;
+            int y;
+            int.TryParse(UsedArray[0], out x);
+            int.TryParse(UsedArray[1], out y);
+            if (GameArea[x-1, y-1] == 0)
+            {
+                ((PictureBox)sender).Image = null;
             }
         }
 

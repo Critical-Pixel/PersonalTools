@@ -151,6 +151,26 @@
             this.X3Y3.TabIndex = 8;
             this.X3Y3.TabStop = false;
             this.X3Y3.Click += new System.EventHandler(this.ClickHandler);
+
+            this.X1Y1.MouseEnter += new System.EventHandler(this.Hover);
+            this.X1Y2.MouseEnter += new System.EventHandler(this.Hover);
+            this.X1Y3.MouseEnter += new System.EventHandler(this.Hover);
+            this.X2Y1.MouseEnter += new System.EventHandler(this.Hover);
+            this.X2Y2.MouseEnter += new System.EventHandler(this.Hover);
+            this.X2Y3.MouseEnter += new System.EventHandler(this.Hover);
+            this.X3Y1.MouseEnter += new System.EventHandler(this.Hover);
+            this.X3Y2.MouseEnter += new System.EventHandler(this.Hover);
+            this.X3Y3.MouseEnter += new System.EventHandler(this.Hover);
+
+            this.X1Y1.MouseLeave += new System.EventHandler(this.HoverLeave);
+            this.X1Y2.MouseLeave += new System.EventHandler(this.HoverLeave);
+            this.X1Y3.MouseLeave += new System.EventHandler(this.HoverLeave);
+            this.X2Y1.MouseLeave += new System.EventHandler(this.HoverLeave);
+            this.X2Y2.MouseLeave += new System.EventHandler(this.HoverLeave);
+            this.X2Y3.MouseLeave += new System.EventHandler(this.HoverLeave);
+            this.X3Y1.MouseLeave += new System.EventHandler(this.HoverLeave);
+            this.X3Y2.MouseLeave += new System.EventHandler(this.HoverLeave);
+            this.X3Y3.MouseLeave += new System.EventHandler(this.HoverLeave);
             // 
             // TurnSelect
             // 
@@ -227,6 +247,8 @@
             this.PerformLayout();
 
         }
+
+    
 
         #endregion
 
