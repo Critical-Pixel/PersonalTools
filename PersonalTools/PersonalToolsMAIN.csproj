@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GStuff\G2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GStuff\G2.Designer.cs">
+      <DependentUpon>G2.cs</DependentUpon>
+    </Compile>
     <Compile Include="GStuff\G1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,9 @@
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="GStuff\G2.resx">
+      <DependentUpon>G2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GStuff\G1.resx">
       <DependentUpon>G1.cs</DependentUpon>
     </EmbeddedResource>

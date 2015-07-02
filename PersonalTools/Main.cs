@@ -14,7 +14,7 @@ namespace PersonalTools
         static void Main()
         {
             Console.WriteLine("Starting Testbox");
-            Application.Run(new G1());
+            Application.Run(new G2());
             //Application.Run(new TESTBOX());
         }
     }
