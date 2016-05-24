@@ -50,10 +50,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GStuff\G2.cs">
+    <Compile Include="CompressionTools\Compression.cs" />
+    <Compile Include="GStuff\G2\G2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GStuff\G2.Designer.cs">
+    <Compile Include="GStuff\G2\G2.Designer.cs">
       <DependentUpon>G2.cs</DependentUpon>
     </Compile>
     <Compile Include="GStuff\G1.cs">
@@ -62,6 +63,13 @@
     <Compile Include="GStuff\G1.Designer.cs">
       <DependentUpon>G1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GStuff\G2\G2Options.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GStuff\G2\G2Options.Designer.cs">
+      <DependentUpon>G2Options.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GStuff\G2\G2OptionsCollection.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -87,11 +95,14 @@
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="GStuff\G2.resx">
+    <EmbeddedResource Include="GStuff\G2\G2.resx">
       <DependentUpon>G2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GStuff\G1.resx">
       <DependentUpon>G1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GStuff\G2\G2Options.resx">
+      <DependentUpon>G2Options.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -107,6 +118,9 @@
   <ItemGroup>
     <None Include="GStuff\Images\X.png" />
     <None Include="GStuff\Images\O.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\JavaScript1.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.Sql.UnitTesting.targets" Condition="'$(SQLDBExtensionsRefPath)' != ''" />
