@@ -59,20 +59,24 @@
             this.button2 = new System.Windows.Forms.Button();
             this.DateCheckOutput = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(12, 12);
+            this.richTextBox1.Location = new System.Drawing.Point(3, 3);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(175, 211);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // Email1
             // 
-            this.Email1.Location = new System.Drawing.Point(13, 230);
+            this.Email1.Location = new System.Drawing.Point(4, 221);
             this.Email1.Name = "Email1";
             this.Email1.Size = new System.Drawing.Size(108, 33);
             this.Email1.TabIndex = 1;
@@ -183,7 +187,7 @@
             this.panel1.Controls.Add(this.textBox5);
             this.panel1.Controls.Add(this.textBox7);
             this.panel1.Controls.Add(this.textBox6);
-            this.panel1.Location = new System.Drawing.Point(193, 12);
+            this.panel1.Location = new System.Drawing.Point(184, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(295, 263);
             this.panel1.TabIndex = 13;
@@ -305,7 +309,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(524, 18);
+            this.button1.Location = new System.Drawing.Point(515, 9);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 14;
@@ -315,7 +319,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(524, 57);
+            this.button2.Location = new System.Drawing.Point(515, 48);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 15;
@@ -325,37 +329,57 @@
             // 
             // DateCheckOutput
             // 
-            this.DateCheckOutput.Location = new System.Drawing.Point(524, 95);
+            this.DateCheckOutput.Location = new System.Drawing.Point(515, 86);
             this.DateCheckOutput.Name = "DateCheckOutput";
             this.DateCheckOutput.Size = new System.Drawing.Size(100, 20);
             this.DateCheckOutput.TabIndex = 26;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(605, 57);
+            this.dateTimePicker1.Location = new System.Drawing.Point(596, 48);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 27;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.richTextBox1);
+            this.panel2.Controls.Add(this.dateTimePicker1);
+            this.panel2.Controls.Add(this.Email1);
+            this.panel2.Controls.Add(this.DateCheckOutput);
+            this.panel2.Controls.Add(this.panel1);
+            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Location = new System.Drawing.Point(349, 12);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(805, 273);
+            this.panel2.TabIndex = 28;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(13, 12);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 29;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // TESTBOX
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(886, 297);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.DateCheckOutput);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.Email1);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.panel2);
             this.Name = "TESTBOX";
             this.Text = "TESTBOX";
             this.Load += new System.EventHandler(this.TESTBOX_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -392,5 +416,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox DateCheckOutput;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button3;
     }
 }

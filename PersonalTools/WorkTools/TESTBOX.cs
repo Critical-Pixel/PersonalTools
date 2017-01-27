@@ -12,6 +12,8 @@ using System.Reflection;
 using PersonalTools.Models;
 using PersonalTools;
 using PersonalTools.ClassTester;
+using System.Data.SqlClient;
+using DataAccessLayer;
 namespace PersonalTools
 {
 
@@ -40,11 +42,11 @@ namespace PersonalTools
     //        var c = GetAll(this, typeof(TextBox));
   
     //        foreach (Control Text in c)
-   //         {
+    //         {
     //            Text.Text = Text.Name;
-   //         }
-    //        MessageBox.Show("Total Controls: " + c.Count());
-          // richTextBox1.Text = em.SendNotificationEmail();
+    //         }
+    //          MessageBox.Show("Total Controls: " + c.Count());
+    //          richTextBox1.Text = em.SendNotificationEmail();
         }
 
         private void TESTBOX_Load(object sender, EventArgs e)
@@ -93,6 +95,52 @@ namespace PersonalTools
             { DateCheckOutput.Text = "We're after this date"; }
             else if (Check < Sept)
             { DateCheckOutput.Text = "We're before this date"; }
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+//              new AdventureEntities().ExecuteStoreCommand(
+//        @"    UPDATE Users
+//              SET lname = @lname 
+//              WHERE Id = @id",
+//        new SqlParameter("lname", lname), new SqlParameter("id", id));
+
+//  using (SqlConnection con = new SqlConnection("Persist Security Info=False;Integrated Security=true;Initial Catalog=Remember;server=(local)"))
+//  {
+//    con.Open();
+//    using (SqlCommand cmd = con.CreateCommand())
+//    {
+//      cmd.CommandText = @"
+//          UPDATE Users
+//          SET lname = @lname 
+//          WHERE Id = @id";
+//      cmd.Parameters.AddWithValue("lname", lname);
+//      cmd.Parameters.AddWithValue("id", id);
+//      cmd.ExecuteNonQuery();
+//    }
+//  }
+
+//          //  SqlConnection sqlConnection1 = new SteveTestDataEntities();
+//            SteveTestDataEntities Entity = new SteveTestDataEntities();
+//         // var connection = ((SteveTestDataEntities)context.Connection).StoreConnection;
+//            SqlCommand cmd = new SqlCommand();
+//            SqlDataReader reader;
+
+//            cmd.CommandText = "SELECT * FROM Customers";
+//            cmd.CommandType = CommandType.Text;
+//            cmd.Connection = Entity;
+
+//            sqlConnection1.Open();
+
+//            reader = cmd.ExecuteReader();
+//            // Data is accessible through the DataReader object here.
+
+//            sqlConnection1.Close();
         }
  
     }

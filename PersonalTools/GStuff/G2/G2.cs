@@ -182,6 +182,7 @@ namespace PersonalTools.GStuff
 
             }
         }
+
         #region Gets
         void GetAddress(object sender)
         {
@@ -292,7 +293,6 @@ namespace PersonalTools.GStuff
         }
         #endregion
 
-
         float StartingWidth;
         float StartingHeight;
         float widthRatio = 1;
@@ -361,6 +361,7 @@ namespace PersonalTools.GStuff
         {
             return new Size((int)(this.Size.Width - 50) / SizeX, (int)((this.Size.Height - 20) / SizeY));
         }
+
         private void Reset_Click(object sender, EventArgs e)
         {
             Reset.Visible = false;

@@ -1,1 +1,1 @@
-﻿var person = ["John", "Doe", 46];
+﻿var person = ["John", "Doe", 46]
